@@ -1,0 +1,52 @@
+<html ng-app="mpApp">
+    <head>
+        <title>PROYECTO 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/lib/angular.js"></script>
+        <script src="js/lib/angular-route.js"></script>
+        <script src="js/lib/angular-ui-router.js"></script>
+        <script src="js/lib/ocLazyLoad.js"></script>
+        <script src="js/lib/angular-resource.js"></script>
+        <script src="app/app.js"></script>
+       
+        <!-- orden logico -->
+        <script src="app/ui/module.js"></script>
+        <script src="app/public/module.js"></script>
+
+    </head>
+    <body data-smart-page-title="">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              
+                              </button>
+                    <a class="navbar-brand" href="#">ANGULARJS</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a  ui-sref="public.home">Home</a></li>
+                    <li><a  ui-sref="public.tareas">Tareas</a></li>
+                    <li><a  ui-sref="public.categorias">Categorías</a></li>
+                </ul>
+                      </div>
+                    </div>
+                  </nav> 
+        </nav>
+        <div class="jumbotron">
+            <div class="container">
+                <h1>No dejes para mañana lo que puedes hacer hoy!!!</h1>
+                <p>Administra tu tiempo ... Agenda tus tareas</p>
+            </div>
+        </div>
+        <div class="container">
+            <div ui-view="root@app"></div>
+        </div>
+    </body>
+</html>
