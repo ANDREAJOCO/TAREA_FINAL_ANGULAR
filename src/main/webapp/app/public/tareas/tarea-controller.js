@@ -2,7 +2,7 @@
 var module = angular.module('mpApp.public');
 
 
-module.controller('searchTareaController', function ($state,$log, tareaResource) {
+module.controller('searchTareaController', function ($log, tareaResource) {
     var vm = this;
     
     vm.tareas = [];
@@ -16,7 +16,7 @@ module.controller('searchTareaController', function ($state,$log, tareaResource)
             $log.error('search error ' + responseHeaders);
         };
 
-         tareaResource.queryAll({}, successCallback, errorCallback);
+         tareaResource.queryAll({"max":100}, successCallback, errorCallback);
     };
 
     vm.evaluateState = function(value){
@@ -34,9 +34,7 @@ module.controller('editTareaController', function ($log, $stateParams, $location
     vm.location = $location.path();
     vm.tarea = {};
 
-    categoriaResource.queryAll({"max":1000}, (data)=> { vm.categorias = data }, (responseHeaders)=> { $log.error('search tareas error ' + responseHeaders); });
-   
-
+    categoriaResource.queryAll({"max":1000}, (data)=> { vm.categorias = data }, (responseHeaders)=> { $log.error('search categories error ' + responseHeaders); });
 
     vm.get = function(){
         var successCallback = function(data, responseHeaders) {
@@ -95,8 +93,7 @@ module.controller('newTareaController', function ($log, $location, tareaResource
     var vm = this;
     vm.tarea = {};
     
-    tareaResource.queryAll({"max":1000}, (data)=> { vm.tarea = data }, (responseHeaders)=> { $log.error('search tareas error ' + responseHeaders); 
-});
+    categoriaResource.queryAll({"max":1000}, (data)=> { vm.categorias = data }, (responseHeaders)=> { $log.error('search categories error ' + responseHeaders); });
 
     vm.save = function () {
 

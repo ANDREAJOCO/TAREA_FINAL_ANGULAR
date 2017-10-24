@@ -7,7 +7,7 @@
             <div class="form-group" ng-class="{ 'has-error': nabform.id.$invalid }">
                 <label class="col-md-4 control-label" for="id">Id Tarea</label>  
                 <div class="col-md-4">
-                    <input id="id" name="id" ng-model="vm.tarea.id" placeholder="id automático" class="form-control input-md" ng-disabled="true" type="text" />
+                    <input id="id" name="id" ng-model="vm.tarea.id" placeholder="Se asignará automáticamente" class="form-control input-md" ng-disabled="true" type="text" />
                 </div>
             </div>
 
@@ -15,7 +15,7 @@
             <div class="form-group" ng-class="{ 'has-error': nabform.title.$invalid }">
                 <label class="col-md-4 control-label" for="title">Titulo</label>  
                 <div class="col-md-4">
-                    <input id="title" name="title" ng-model="vm.tarea.titulo" placeholder="Tarea..." class="form-control input-md" required="" type="text" />
+                    <input id="title" name="title" ng-model="vm.tarea.titulo" placeholder="¿Qué debes hacer?" class="form-control input-md" required="" type="text" />
                 </div>
             </div>
 
