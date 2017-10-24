@@ -1,4 +1,3 @@
-
 var module = angular.module('mpApp.public', ['mpApp.ui','ui.router','ngResource']);
 
 module.constant('comm',{
@@ -44,9 +43,9 @@ module.config(function($urlRouterProvider, $stateProvider){
         },
         resolve: { 
         	searchPostFiles: function($ocLazyLoad) {
-                     return $ocLazyLoad.load(['app/public/tareas/tarea-resource.js',
-                         'app/public/tareas/tarea-controller.js',
-                         'app/public/categorias/categoria-resource.js']);
+                     return $ocLazyLoad.load(['app/public/tareas/TareaResource.js',
+                         'app/public/tareas/tareaController.js',
+                         'app/public/categorias/categoriaResource.js']);
             }
         }
     });
@@ -55,7 +54,7 @@ module.config(function($urlRouterProvider, $stateProvider){
         url : '/new',
         views : {
             "root@app" : {
-                templateUrl : 'app/public/tareas/tareaDetalle.html',
+                templateUrl : 'app/public/tareas/TareasDes.html',
                 controller : 'newTareaController',
                 controllerAs : 'vm'
             }
@@ -66,7 +65,7 @@ module.config(function($urlRouterProvider, $stateProvider){
         url : '/update/:id',
         views : {
             "root@app" : {
-                templateUrl : 'app/public/tareas/tareaDetalle.html',
+                templateUrl : 'app/public/tareas/TareasDes.html',
                 controller : 'editTareaController',
                 controllerAs : 'vm'
             }
@@ -84,8 +83,8 @@ module.config(function($urlRouterProvider, $stateProvider){
         },
         resolve: { 
         	searchPostFiles: function($ocLazyLoad) {
-                     return $ocLazyLoad.load(['app/public/categorias/categoria-resource.js',
-                    	 'app/public/categorias/categoria-controller.js']);
+                     return $ocLazyLoad.load(['app/public/categorias/categoriaResource.js',
+                    	 'app/public/categorias/categoriaController.js']);
             }
         }
 	});

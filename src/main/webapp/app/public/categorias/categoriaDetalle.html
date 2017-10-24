@@ -2,9 +2,9 @@
     <form name="nabform" class="form-horizontal">
         <fieldset>
 
-            <!-- Form Name -->
+       
             <legend>Categorías</legend>
-            <!-- Text input-->
+         
             <div class="form-group" ng-class="{ 'has-error': nabform.id.$invalid }">
                 <label class="col-md-4 control-label" for="id">Id</label>  
                 <div class="col-md-4">
@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+     
             <div class="form-group" ng-class="{ 'has-error': nabform.title.$invalid }">
                 <label class="col-md-4 control-label" for="nombre">Nombre</label>  
                 <div class="col-md-4">
@@ -21,15 +21,15 @@
                 </div>
             </div>
             
-            <!-- Textarea -->
+        
             <div class="form-group" ng-class="{ 'has-error': nabform.body.$invalid }">
                 <label class="col-md-4 control-label" for="body">Descripción</label>
                 <div class="col-md-4">                     
                     <textarea class="form-control" id="body" name="body" placeholder="Describa la categoría" ng-model="vm.categoria.descripcion" required="">Descripción</textarea>
-                </div>
+                </div> 
             </div>
 
-            <!-- Button (Double) -->
+        
             <div class="form-group">
                 <label class="col-md-4 control-label" for="ok"></label>
                 <div class="col-md-8">
