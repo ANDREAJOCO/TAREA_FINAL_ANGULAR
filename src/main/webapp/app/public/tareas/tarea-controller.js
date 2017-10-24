@@ -34,7 +34,7 @@ module.controller('editTareaController', function ($log, $stateParams, $location
     vm.location = $location.path();
     vm.tarea = {};
 
-    categoriaResource.queryAll({"max":1000}, (data)=> { vm.categorias = data }, (responseHeaders)=> { $log.error('search categories error ' + responseHeaders); });
+    categoriaResource.queryAll({"max":1000}, (data)=> { vm.categorias = data }, (responseHeaders)=> { $log.error('search tareas error ' + responseHeaders); });
    
 
 
@@ -95,7 +95,7 @@ module.controller('newTareaController', function ($log, $location, tareaResource
     var vm = this;
     vm.tarea = {};
     
-    categoriaResource.queryAll({"max":1000}, (data)=> { vm.categorias = data }, (responseHeaders)=> { $log.error('search categories error ' + responseHeaders); 
+    tareaResource.queryAll({"max":1000}, (data)=> { vm.tarea = data }, (responseHeaders)=> { $log.error('search tareas error ' + responseHeaders); 
 });
 
     vm.save = function () {
