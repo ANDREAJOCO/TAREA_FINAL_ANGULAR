@@ -2,7 +2,7 @@
 var module = angular.module('mpApp.public', ['mpApp.ui','ui.router','ngResource']);
 
 module.constant('comm',{
-    url : '/angularjs/rest'
+    url : '/TAREA_FINAL_ANGULAR/rest'
 });
 
 module.config(function($urlRouterProvider, $stateProvider){

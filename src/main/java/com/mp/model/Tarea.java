@@ -30,8 +30,10 @@ public class Tarea implements Serializable {
     private int version;
 
     /**
-     *
-     */
+    *
+    * @author acoronado
+    */
+    
     @Column(name = "fecha_limite", nullable = false)
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     protected Date fechaLimite;
